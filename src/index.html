@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Сергей Ярков">
+  <title>15.Homework-Site-Modal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/cece131f01.js" crossorigin="anonymous"></script>
+</head>
+
+<body onscroll="mySticky()">
+  
+  <!-- Шапка с Меню -->
+  @@include("html/chunk/nav.html")
+
+  <!-- Главный экран -->
+  @@include("html/chunk/header.html")
+
+  <!-- Контент -->
+  @@include("html/chunk/main.html")
+
+  <!-- Футер -->
+  <footer id="footer">
+    <div class="container d-flex justify-content-center flex-column align-items-center bg-footer pt-3 pb-3">
+      <p>Все права защищены &copy;</p>
+      <p>Created my free logo at <a href="https://freelogo.me">FreeLogo.me</a></p>
+
+    </div>
+  </footer>
+  
+  <!-- Модальное окно для Поиска-->
+  @@include("html/chunk/search.html")
+
+  <script src="js/bootstrap/bootstrap.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+  <script src="js/svg.rotate.js"></script>
+  <script src="js/newses.js"></script>
+  <script src="js/sticky.js"></script>
+  <script src="js/search.js"></script>
+
+
+</body>
+
+</html>

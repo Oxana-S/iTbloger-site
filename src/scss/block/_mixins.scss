@@ -1,0 +1,37 @@
+/* _mixins.scss */
+@mixin a-link {
+    a {
+        color: #6f6f6f;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        transition: all 0.6s ease;
+
+
+
+        &:hover {
+            color: darken($link-active, 5);
+        }
+
+        &:active {
+            color: darken($link-active, 20);
+        }
+    }
+}
+
+@mixin button-bg($bg-color:indianred, $color:#fff, $f-size:16px) {
+    background: $bg-color;
+    text-transform: uppercase;
+    font-size: $f-size;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: $color;
+
+    &:hover {
+        background: darken($bg-color, 8%);
+        transition: all 0.6s ease;
+    }
+
+    &:active {
+        background: darken($bg-color, 25%);
+    }
+}

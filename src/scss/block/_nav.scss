@@ -1,0 +1,116 @@
+/* _nav.scss */
+
+nav {
+    position: relative;
+
+    .head {
+        width: 100%;
+
+        .head__wrap {
+            width: 100%;
+            margin-top: 0;
+
+            .head__logo {
+                display: flex;
+                align-items: center;
+                top: none;
+                right: none;
+            }
+        }
+
+        .head__logo {
+            svg {
+                width: 76px;
+                height: 76px;
+                fill: chocolate;
+                cursor: pointer;
+
+                // Вращение svg шестеренки
+                path {
+                    transition: transform 1s ease;
+                    transform-origin: 28px 28px;
+                }
+            }
+        }
+
+        .nav-link {
+            font-weight: 600;
+            font-size: 20px;
+            color: #434343;
+            // background-color: ;
+            padding: 10px;
+            transition: background-color 600ms ease;
+
+            &:hover {
+                // padding-left: 4px;
+                background-color: #c5c5c5;
+            }
+        }
+    }
+}
+// Добавление класса для вращения svg
+.ani {
+    transform: rotate(360deg);
+}
+
+.bg-nav {
+    background-color: #979797;
+}
+
+// Спрятать/Показать Лого
+.hidden {
+    display: none;
+}
+
+// Липкое меню
+// Добавление классов через скрипт
+.sticky {
+    position: fixed;
+    top: -13px;
+    width: 100%;
+    z-index: 10;
+}
+
+.stickyColor {
+    background: #c9d4a9;
+    transition: 0.3s;
+    border-radius: 0;
+    border-bottom: 1px solid #434343;
+}
+
+@media (width < 992px) {
+    nav {
+        .head {
+            padding: 20px;
+
+            .head__wrap {
+                position: relative;
+                margin-top: 30px;
+
+                .head__logo {
+                    top: -90px;
+                    right: -120px;
+                    position: absolute;
+                    // Спрятать / Показать Лого
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        margin-top: 18px;
+    }
+
+    // Спрятать / Показать Лого
+    .hidden {
+        display: flex;
+        float: right;
+        margin-top: 0px;
+        align-items: center;
+
+        & picture {
+            display: none;
+        }
+    }
+}

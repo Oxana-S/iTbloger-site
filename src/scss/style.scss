@@ -1,0 +1,51 @@
+/* style.scss */
+
+// Файлы scss
+@import "block/vars";
+@import "block/fonts";
+@import "block/mixins";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: $body-color;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+}
+
+nav,
+header,
+main {
+    margin-bottom: 50px;
+}
+p {
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+/* Remove outline on the forms and links */
+:focus,
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none;
+    border-color: none !important;
+}
+.green-border {
+    border: 1px solid #548f5e;
+    margin: 3px;
+    padding: 3px;
+}
+
+@import "block/nav";
+@import "block/header";
+@import "block/main";
+@import "block/footer";
+@import "block/search";

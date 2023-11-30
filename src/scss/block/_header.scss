@@ -1,0 +1,58 @@
+/* _header.scss */
+// @import 'block/vars';
+
+
+.header__titles {
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+
+    h1 {}
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        @include button-bg($button-color-header, $f-size:20px);
+        // padding: 10px 20px;
+        font-weight: bold;
+        margin-top: 50px;
+        padding: 20px 30px;
+    }
+
+}
+
+.header__img {
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 30px;
+    padding-bottom: 200px;
+
+    .img__block {
+        width: 300px;
+        height: 300px;
+        border: 5px solid #515151;
+        overflow: hidden;
+        margin: 0 auto;
+
+        img {
+            width: 150%;
+            height: auto;
+            margin: -60px 0 0 -60px
+        }
+    }
+
+
+}
+@media (width < 768px) {
+    .header__titles {
+        p {
+            font-size: 16px;
+        }
+        button {
+               margin-left: 80px;
+            }
+    }
+}

@@ -1,0 +1,118 @@
+/* _main.scss */
+
+.bg-main {
+    background-color: #ffc099;
+}
+// Анимация добавляемых блоков с новостями
+.b-show {
+    animation: showBlock 1s linear forwards;
+}
+
+@keyframes showBlock {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+// End.Анимация добавляемых блоков с новостями
+
+main {
+    .news__cards,
+    .notice__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .news {
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        .news__cards {
+            background-color: #deffbe;
+            padding: 15px;
+            padding-top: 40px;
+            margin-bottom: 30px;
+
+            .card {
+                width: 48%;
+                margin-bottom: 30px;
+
+                .card__img {
+                    max-height: 400px;
+                    overflow-y: hidden;
+                }
+            }
+
+            a {
+                @include button-bg($button-color-news, $f-size: 14px);
+                // padding: 10px 20px;
+                font-weight: bold;
+                text-transform: lowercase;
+                border: none;
+            }
+        }
+    }
+
+    .notice {
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        .notice__text {
+            margin-bottom: 20px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            padding: 12px 20px;
+            background-color: darkgoldenrod;
+            color: $body-color;
+        }
+
+        .notice__cards {
+            padding: 20px;
+            background-color: #b8860b7d;
+
+            a {
+                @include button-bg($button-color-notice, $f-size: 18px);
+                // padding: 10px 20px;
+                font-weight: bold;
+                text-transform: lowercase;
+                border: none;
+            }
+        }
+    }
+}
+
+.btn__news-more {
+    @include button-bg;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+// Скрыть кнопку "Показать ещё"
+.hide {
+    display: none;
+}
+
+@media (width < 768px) {
+    .news {
+        h5 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .news__cards {
+            a {
+                padding: 5px 10px !important;
+            }
+        }
+    }
+}
